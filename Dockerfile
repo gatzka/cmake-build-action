@@ -1,4 +1,4 @@
-FROM gatzka/gh-c-ci:1.4.0
+FROM gatzka/docker-cxx-ci:latest
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
