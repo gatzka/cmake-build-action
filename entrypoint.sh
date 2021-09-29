@@ -25,7 +25,8 @@ if [ "x$INPUT_SSH_KEY" != 'x' ]; then
     mkdir ~/.ssh
 	echo ${INPUT_SSH_KEY} >> ~/.ssh/id_rsa 
     chmod 600 ~/.ssh/id_ed25519
-    echo -e "Host *\n    StrictHostKeyChecking no\n"> ~/.ssh/config
+    echo -e "Host *\n    StrictHostKeyChecking no\n" > ~/.ssh/config
+fi
 
 mkdir build
 cd build
