@@ -22,6 +22,8 @@ if [ "x$INPUT_CMAKE_BUILD_TARGET" != 'x' ]; then
 fi
 
 if [ "x$INPUT_SSH_KEY" != 'x' ]; then
+    eval $(ssh-agent)
+    ssh-add - <<< "$INPUT_SSH_KEY"
     mkdir ~/.ssh
 	echo ${INPUT_SSH_KEY} >> ~/.ssh/id_ed25519 
     chmod 600 ~/.ssh/id_ed25519
