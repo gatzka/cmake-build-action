@@ -23,7 +23,7 @@ fi
 
 if [ "x$INPUT_SSH_KEY" != 'x' ]; then
     mkdir ~/.ssh
-	echo ${INPUT_SSH_KEY} >> ~/.ssh/id_rsa 
+	echo ${INPUT_SSH_KEY} >> ~/.ssh/id_ed25519 
     chmod 600 ~/.ssh/id_ed25519
     echo -e "Host *\n    StrictHostKeyChecking no\n" > ~/.ssh/config
 fi
