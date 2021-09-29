@@ -21,6 +21,11 @@ if [ "x$INPUT_CMAKE_BUILD_TARGET" != 'x' ]; then
 	CMAKE_BUILD_TARGET+=" --target "${INPUT_CMAKE_BUILD_TARGET}
 fi
 
+if [ "x$INPUT_SSH_KEY" != 'x' ]; then
+    mkdir ~/.ssh
+	echo ${INPUT_SSH_KEY} >> ~/.ssh/id_rsa 
+fi
+
 mkdir build
 cd build
 
