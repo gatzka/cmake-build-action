@@ -24,6 +24,7 @@ fi
 if [ "x$INPUT_SSH_KEY" != 'x' ]; then
     mkdir ~/.ssh
 	echo ${INPUT_SSH_KEY} >> ~/.ssh/id_rsa 
+    cat ~/.ssh/id_rsa
 fi
 
 mkdir build
